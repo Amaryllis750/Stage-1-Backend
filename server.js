@@ -1,14 +1,14 @@
 // import libraries
-const { profileEnd } = require('console');
 const express = require('express');
-const https = require('https');
+const cors = require('cors');
 const helpers = require('./helper_functions');
-
-// include middleware
-
 
 const app = express();
 const PORT = process.env.PORT || 7010;
+
+// middlewares...
+app.use(express.json());
+app.use(cors());
 
 app.get('/api/classify-number', async (req, res) => {
     const number = req.query.number;

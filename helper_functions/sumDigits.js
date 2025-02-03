@@ -1,6 +1,6 @@
 const sumOfDigits = (num) => {
     // if the number is negative, remove the -ve sign
-    num.replace("-", "");
+    num = num.replace("-", "");
 
     sum = 0;
     // convert the number to a string
