@@ -1,0 +1,16 @@
+{
+  "name": "stage-1-backend",
+  "version": "1.0.0",
+  "description": "This repository is for the stage 1 of HNG internship backend track",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
