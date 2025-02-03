@@ -13,9 +13,9 @@ app.use(cors());
 
 app.get('/api/classify-number', async (req, res) => {
     const number = req.query.number;
-    if(!helpers.isNumeric(number)){
+    if (!helpers.isNumeric(number)) {
         return res.status(400).json({
-            "number": "alphabet", 
+            "number": "alphabet",
             "error": "true"
         })
     }
@@ -25,7 +25,15 @@ app.get('/api/classify-number', async (req, res) => {
     const is_perfect = helpers.isPerfect(number);
     try {
         const data = await helpers.getFunFact(number);
-        return res.status(200).json({ "number": number, "fun_fact": data, "sum_of_digits": sum, "properties": properties, "is_prime": is_prime, "is_perfect": is_perfect});
+        return res.status(200).json(
+            {
+                "number": parseInt(number),
+                "is_prime": is_prime,
+                "is_perfect": is_perfect,
+                "properties": properties,
+                "digit_sum": sum,
+                "fun_fact": data
+            });
     }
     catch (err) {
         return res.status(500).json({
