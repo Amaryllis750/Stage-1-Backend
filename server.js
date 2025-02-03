@@ -10,9 +10,10 @@ const PORT = process.env.PORT || 7010;
 app.use(express.json());
 app.use(cors());
 
+
 app.get('/api/classify-number', async (req, res) => {
     const number = req.query.number;
-    if(Number.isInteger(number)){
+    if(!helpers.isNumeric(number)){
         return res.status(400).json({
             "number": "alphabet", 
             "error": "true"
