@@ -1,6 +1,6 @@
 const sumOfDigits = (num) => {
     // if the number is negative, remove the -ve sign
-    is_neg = false;     // this is flag that'll help us make the number negative
+    let is_neg = false;     // this is flag that'll help us make the number negative
     if(num.includes("-")) is_neg = true;
     num = num.replace("-", "");
 
