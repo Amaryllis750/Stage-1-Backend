@@ -1,6 +1,7 @@
 const isPerfect = (num) => {
     num = parseInt(num);  // convert the string into a number
-    if (num < 0) return false;  // negative numbers cannot be perfect
+    // handling base cases...
+    if (num <= 1) return false;  // negative numbers, 0 and 1 cannot be perfect.
 
     let sum = 1;
 
