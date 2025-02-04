@@ -1,6 +1,6 @@
 const returnProperties = (num) => {
     const properties = [];
-    const is_neg = false;   // this is a flag that tracks whether the number is negative or not
+    let is_neg = false;   // this is a flag that tracks whether the number is negative or not
     if(num.includes("-")) is_neg = true;
     // if the number is negative, replace the -ve sign
     num = num.replace("-", "");
