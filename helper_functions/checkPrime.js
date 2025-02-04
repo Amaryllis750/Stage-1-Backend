@@ -2,6 +2,8 @@ const checkPrime = (num) => {
     // convert the number from a string to number
     num = parseInt(num);
 
+    if (num < 0) return false;
+
     // the sieve is designed to check for primes before the number num, therefore num won't be included
     // therefore, instead of the length of our array being of num length, it will be of num + 1 length
     if (num === 2) return true
